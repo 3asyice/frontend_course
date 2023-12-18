@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+    <title>FrontEnd Course</title>
+    <style>
+        body {
+            background-color: #333333;
+            color: #ffffff;
+            font-family: times;
+        }
+        h1,h4 {
+            text-align: center;
+            flex-direction: center;
+            color: #33ff33;
+        }
+        .d0 {
+            padding: 10px;
+            border: 1px solid red;
+        }
+        .a {
+            color: white;
+        }
+        .d1 {
+            flex-direction: start;
+            color: #ffffff;
+            padding: 30px;
+            border: 1px solid red;
+            font-size: 15px;
+        }
+        .red {
+            color: #cc0000;
+        }
+        .img3 {
+            height: 250px;
+            width:;500px;
+            border-radius: 150px;
+            align-self: end;
+            filter: invert(80%);
+        }
+        .img2, .img1 {
+            height: 250px;
+            width:;500px;
+            border-radius: 150px;
+            align-self: end;
+        }
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgb(34,152,241);
+            background: linear-gradient(90deg, rgba(34,152,241,1) 0%, rgba(34,175,241,1) 100%);
+        }
+
+        input, button {
+            font-size: 15px;
+            border-radius: 10px;
+            border: none;
+            padding: 10px;
+        }
+
+        input {
+            width: 300px;
+            height: 50px;
+            font-size: 12px;
+
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        button {
+            margin: 5px;
+            background-color: #ff9933;
+            color: white;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff9933;
+            transition: 0.3s;
+        }
+        .dy {
+            color: #ff9933;
+        }
+    </style>
+    <body>
+        <div class="d0">
+            <h1>Curso de Frontend</h1>
+            <h4>Um curso Frontend</h4>
+        </div>
+        <div class="d1">
+            <h3>Tópicos discutidos:</h3>
+            <li><a class="a"href="#internet">Internet</a></li>
+            <li><a class="a"href="#HTML">HTML</a></li>
+            <li><a class="a"href="#CSS">CSS</a></li>
+            <li><a class="a"href="#JavaScript">JavaScript</a></li>
+        </div>
+        <div class="d1">
+            <h3 id="internet"><span style="color:#ff0000">Internet</span>
+            </h3><p>
+                A Internet é uma rede de redes que foi desenvolvida no fim dos anos 60 pelo Departamento de Defesa dos EUA, com a finalidade de criar uma rede de comunicação descentralizada que pudesse conter um ataque nuclear.<br>A Internet funciona através de dispositivos e sistemas de computadores que juntos usam um conjunto de protocolos padronizados.<br> Um protocolo define como informações são trocadas entre os dispositivos e garante que os dados sejam transmitidos de apropriado e com segurança.
+            </p>
+            <li> <span class="red">Packet</span>: É uma pequena unidade de dados que é transmitido dentro da Internet.
+            </li>
+            <li><span class="red">IP Address</span>: É um identificador único associado a cada dispositivo em uma rede, usado para rotear dados para o destinatário certo.
+            </li>
+            <li> <span class="red">DNS</span>: O Nome do Domínio do Sistema (Domain Name System) é responsável por traduzir nomes de domínio em Endereços de IP.
+            </li>
+            <li>  <span class="red">HTTPS</span>: É uma versão encriptografada de HTTP que é usado para providenciar uma comunicação segura entre o cliente e o servidor.
+            </li>
+            <li><span>Router</span>: Um dispositivo que direciona pacotes de dados entre diferentes redes.</li>
+            <li> <span class="red">Domain Name</span>: Um nome legível que é usado para identificar um website, tanto quanto google.com.
+            </li>
+            <li><span class="red">HTTP</span>: O Hypertext Transfer Protocol é usado para transferir dados entre o cliente (quanto a um navegador da web) e o servidor (quanto a um website).
+            </li>
+            <li><span class="red">SSL/TLS</span>: The Secure Socket Layer e Transport Layer Security são protocolos usados para providenciar uma comunicação segura dentro da Internet.
+            </li>
+            <img class="img3"src="https://img.freepik.com/free-vector/www-internet-globe-grid_78370-2008.jpg?size=626&ext=jpg">
+        </div>
+        <div class="d1">
+            <a href="#" id="foo"></a>
+            <h3 id="HTML"><span style="color:#ff6600">HTML</span></h3>
+            <p>
+                HTML é a sigla para Linguagem de Marcação de Hipertexto (Hyper Text Markup Language), isso é o conjunto de marcação de linguagem de criação das web páginas.
+            </p>
+            <br>
+            <p>
+                EXEMPLO DE DOCUMENTO HTML:
+            </p>
+            <input type="text" name="texto" id="texto" placeholder="Digite alguma coisa" value="<!doctype html>
+            <html>
+            <head>
+            <title>Título da Página</title>
+            <body>
+            <h1>Meu Primeiro Heading</h1>
+            <p>Meu primeiro parágrafo</p>
+            </body>
+            </head>
+            </html>" />
+
+            <button onclick="copiarTexto()">Copiar</button>
+            <script>
+                function copiarTexto() {
+                    let textoCopiado = document.getElementById("texto");
+                    textoCopiado.select();
+                    textoCopiado.setSelectionRange(0, 99999)
+                    document.execCommand("copy");
+                    alert("Copiar: " + textoCopiado.value);
+                }
+            </script>
+            <br><br>
+            <p>
+                Aprenda também:
+            </p>
+            <br>
+
+            <li>
+                Para adicionar um <span class="dy">parágrafo</span>:<br> <input type="text" name="texto" id="texto" value="<p></p>">
+            </li><br>
+            <li>
+                Para deixar um texto <span class="dy">importante</span>:<br>
+                <input type="text" name="texto" id="texto" value="<strong>Exemplo</strong>"><br>
+                O Texto fica assim: <strong>Exemplo</strong>.
+            </li><br>
+            <li>
+                Para pular uma linha usamos o <span class="dy">line break</span>:<br>
+                <input type="text" value="<br>"><br>
+                Note que o line break não possui uma tag final porque é uma tag vazia.
+            </li><br>
+            <li>
+                Para adicionar <span class="dy">emphasis</span>:<br>
+                <input type="text" value="<em>Exemplo</em>"><br>
+                O texto fica assim: <em>Exemplo</em>.
+            </li><br>
+            <li>Para adicionar uma <span class="dy">heading</span>:<br>
+                <input value="<h1></h1> <h2></h2> <h3></3> <h4></h4> <h5></h5> <h6></h6>"><br>
+                Há seis diferentes headings, sendo o h1 o maior e, o heading h6 o menor.
+            </li><br>
+            <li>Para adicionar uma <span class="dy">imagem usamos</span>:<br> <input value="<img src=''O link da imagem aqui''>"> <br>Src significa source ou fonte.</li><br>
+            <li> Para adicionar qualquer link:<br> <input value="<a href=''https://www.youtube.com/''>YOUTUBE</a>">
+                Ficaria assim: <a class="dy"href="https://www.youtube.com/">YOUTUBE</a>.
+            </li><br>
+            <li> Adicionando um <span class="dy">iframe</span>:<br>
+                <input value="<iframe src=''https://www.bing.com/''</iframe>"><br>
+                A tag iframe adiciona uma web página dentro de uma página. Por exemplo o navegador bing.com.<br>
+                <iframe style="height:200px;width:320" src="https://www.bing.com/"></iframe>            </li><br>
+            <img class="img1"src="https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-image-logo-html-7.png">
+        </div>
+        <div class="d1">
+            <h3 id="CSS"style="color:#3399ff">CSS</h3>
+            <p>
+                CSS é a sigla para Folha de Estilos em Cascata (Cascating Style Sheet) é a línguagem usada para dar estilo ao frontend de qualquer website. CSS é um fundamento da tecnologia do WWW (World Wide Web) ao lado do HTML e JavaScript.
+            </p>
+            <br>
+            EXEMPLO DE CSS:<br>
+            <input value="body { background-color:lightblue;} h1 { color:white; text-align:center;} p {font-family:verdana;times new roman; font-size:20px;}">
+            <br>  <br><img class="img1" src="https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo-500x313.png">
+            <img style="height: 250px;
+            width:;500px;
+            border-radius: 150px;
+            align-self: end;padding:40px; filter:invert(81%)" src="https://static.javatpoint.com/seo/images/world-wide-web.png">
+        </div>
+        <div class="d1">
+            <h3 id="JavaScript"><span style="color:#ff9933">Java</span><span style="color:#ff3300">Script</span></h3>
+            <p>
+                JavaScript permite adicionar interções nas páginas. Por exemplo os slides dos websites, as interações por cliques, popups e etc.
+            </p>
+
+            <img class="img2"src="https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Symbol-500x281.png">
+        </div>
+    </body>
+</head>
+</html>
