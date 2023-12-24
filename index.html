@@ -8,23 +8,30 @@
             color: #ffffff;
             font-family: times;
         }
-        h1,h4 {
+        h1 {
             text-align: center;
+            flex-wrap: flex;
+            color:#33ff33;
+            font-size: 65px;
+        }
+        h4 {
+            text-align:center ;
             flex-direction: center;
             color: #33ff33;
         }
         .d0 {
-            padding: 10px;
-            border: 1px solid red;
+            padding: 50px;
+            border: 0px solid red;
         }
         .a {
             color: white;
         }
         .d1 {
+            
             flex-direction: start;
             color: #ffffff;
-            padding: 30px;
-            border: 1px solid red;
+            padding: 100px;
+            border: 0px solid red;
             font-size: 15px;
         }
         .red {
@@ -43,20 +50,6 @@
             border-radius: 150px;
             align-self: end;
         }
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-        }
-
-        {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: rgb(34,152,241);
-            background: linear-gradient(90deg, rgba(34,152,241,1) 0%, rgba(34,175,241,1) 100%);
-        }
 
         input, button {
             font-size: 15px;
@@ -66,28 +59,28 @@
         }
 
         input {
-            width: 300px;
-            height: 50px;
-            font-size: 12px;
+            margin:40px;
+            padding: .25em;
+            width: 100%;
+            font-size: 28pt;
+            height:55px;
 
         }
 
         input:focus {
             outline: none;
         }
-
+        
         button {
-            margin: 5px;
-            background-color: #ff9933;
-            color: white;
-            text-transform: uppercase;
-            transition: 0.3s;
+            margin:10px;
+            height:150px;
+            width:200px;
+            border-radius: 50px;
+            font-size: 40px;
+            background-color: black;
+            color:white;
         }
-
-        button:hover {
-            background-color: #ff9933;
-            transition: 0.3s;
-        }
+  
         .dy {
             color: #ff9933;
         }
@@ -98,7 +91,7 @@
             <h4>Um curso Frontend</h4>
         </div>
         <div class="d1">
-            <h3>Tópicos discutidos:</h3>
+            <h3 style="color:lightblue">Tópicos discutidos:</h3><br><br>
             <li><a class="a"href="#internet">Internet</a></li>
             <li><a class="a"href="#HTML">HTML</a></li>
             <li><a class="a"href="#CSS">CSS</a></li>
@@ -192,7 +185,7 @@
             <li> Adicionando um <span class="dy">iframe</span>:<br>
                 <input value="<iframe src=''https://www.bing.com/''</iframe>"><br>
                 A tag iframe adiciona uma web página dentro de uma página. Por exemplo o navegador bing.com.<br>
-                <iframe style="height:200px;width:320" src="https://www.bing.com/"></iframe>            </li><br>
+                <iframe style="height:500px;width:800; margin:50px" src="https://www.bing.com/"></iframe>            </li><br>
             <img class="img1"src="https://www.freepnglogos.com/uploads/html5-logo-png/html5-logo-image-logo-html-7.png">
         </div>
         <div class="d1">
@@ -201,7 +194,7 @@
                 CSS é a sigla para Folha de Estilos em Cascata (Cascating Style Sheet) é a línguagem usada para dar estilo ao frontend de qualquer website. CSS é um fundamento da tecnologia do WWW (World Wide Web) ao lado do HTML e JavaScript.
             </p>
             <br>
-            EXEMPLO DE CSS:<br>
+            <p>EXEMPLO DE CSS:</p><br>
             <input value="body { background-color:lightblue;} h1 { color:white; text-align:center;} p {font-family:verdana;times new roman; font-size:20px;}">
             <br>  <br><img class="img1" src="https://1000logos.net/wp-content/uploads/2020/09/CSS-Logo-500x313.png">
             <img style="height: 250px;
